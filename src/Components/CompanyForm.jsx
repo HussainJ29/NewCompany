@@ -88,7 +88,7 @@ const CompanyForm = () => {
                             <option value="1">Java</option>
                             <option value="2">Angular</option>
                             <option value="3">CSS</option>
-                            <option value="4">HTML Lead</option>
+                            <option value="4">HTML</option>
                             <option value="5">JavaScript</option>
                             <option value="6">UI</option>
                             <option value="7">SQL</option>
