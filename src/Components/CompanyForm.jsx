@@ -63,29 +63,50 @@ const CompanyForm = () => {
                     <Form.Group className="mb-3">
                         <Form.Label>Designation</Form.Label>
                         <Form.Select placeholder="Designation" value={empData.designation.value} onChange={(e) => { setNewCompanyData({ ...newCompanyData, empInfo: [...newCompanyData.empInfo.slice(0, empIndex), { ...empData, designation: { ...empData.designation, value: e.target.value } }, ...newCompanyData.empInfo.slice(empIndex + 1)] }) }}>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="1"> Developer</option>
+                            <option value="2">Manager</option>
+                            <option value="3">System Admin</option>
+                            <option value="4">Team Lead</option>
+                            <option value="5">PM</option>
                         </Form.Select>
                     </Form.Group>
                     <Form.Group className="mb-3">
-                        <Form.Label>Employee Name</Form.Label>
+                        <Form.Label>Enter Join Date</Form.Label>
                         <Form.Control type='date' placeholder="Enter Join Date" value={empData.joinDate.value} onChange={(e) => { setNewCompanyData({ ...newCompanyData, empInfo: [...newCompanyData.empInfo.slice(0, empIndex), { ...empData, joinDate: { ...empData.joinDate, value: e.target.value } }, ...newCompanyData.empInfo.slice(empIndex + 1)] }) }} />
                     </Form.Group><Form.Group className="mb-3">
                         <Form.Label>Email</Form.Label>
                         <Form.Control placeholder="Enter Email" value={empData.email.value} onChange={(e) => { setNewCompanyData({ ...newCompanyData, empInfo: [...newCompanyData.empInfo.slice(0, empIndex), { ...empData, email: { ...empData.email, value: e.target.value } }, ...newCompanyData.empInfo.slice(empIndex + 1)] }) }} />
                     </Form.Group><Form.Group className="mb-3">
-                        <Form.Label>Employee Name</Form.Label>
-                        <Form.Control placeholder="Enter Phone Number" value={empData.phoneNumber.value} onChange={(e) => { setNewCompanyData({ ...newCompanyData, empInfo: [...newCompanyData.empInfo.slice(0, empIndex), { ...empData, phoneNumber: { ...empData.phoneNumber, value: e.target.value } }, ...newCompanyData.empInfo.slice(empIndex + 1)] }) }} />
+                        <Form.Label>Phone Number</Form.Label>
+                        <Form.Control type='number' placeholder="Enter Phone Number" value={empData.phoneNumber.value} onChange={(e) => { setNewCompanyData({ ...newCompanyData, empInfo: [...newCompanyData.empInfo.slice(0, empIndex), { ...empData, phoneNumber: { ...empData.phoneNumber, value: e.target.value } }, ...newCompanyData.empInfo.slice(empIndex + 1)] }) }} />
                     </Form.Group>
                     <h3>Skills Info</h3>
                     {empData.skillInfo.map((skill, skillIndex) => (<Row>
                         <Col xs={5}><Form.Group className="mb-3">
                             <Form.Label>Skill</Form.Label>
                             <Form.Select placeholder="Skill" value={skill.skillName.value} onChange={(e) => { setNewCompanyData({ ...newCompanyData, empInfo: [...newCompanyData.empInfo.slice(0, empIndex), { ...empData, skillInfo: [...empData.skillInfo.slice(0, skillIndex), { ...skill, skillName: { ...skill.skillName, value: e.target.value } }] }, ...newCompanyData.empInfo.slice(empIndex + 1)] }) }}>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                            <option value="1">Java</option>
+                            <option value="2">Angular</option>
+                            <option value="3">CSS</option>
+                            <option value="4">HTML Lead</option>
+                            <option value="5">JavaScript</option>
+                            <option value="6">UI</option>
+                            <option value="7">SQL</option>
+                            <option value="8">React</option>
+                            <option value="9">PHP</option>
+                            <option value="10">GIT</option>
+                            <option value="11">AWS</option>
+                            <option value="12">Python</option>
+                            <option value="13">Django</option>
+                            <option value="14">C</option>
+                            <option value="15">C++</option>
+                            <option value="16">C#</option>
+                            <option value="17">Unity</option>
+                            <option value="18">R</option>
+                            <option value="19">AI</option>
+                            <option value="20">NLP</option>
+                            <option value="21">Photoshop</option>
+                            <option value="22">Node JS</option>
                             </Form.Select>
                         </Form.Group></Col>
                         <Col xs={5}><Form.Group className="mb-3">
